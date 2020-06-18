@@ -1,0 +1,9 @@
+footer {
+    grid-area: ft;
+    background-color:  #78898E;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,22 @@
+@import 'links.css';
+
+header {
+    grid-area: hd;
+    background-color: #78898E;
+    color: white;
+    display: grid;
+    grid-template-columns: 87% 13%;
+    align-items: center;
+}
+
+#title{
+    text-decoration:none;
+    color:white;
+}
+
+
+@media(min-width: 900px) {
+    header {
+        grid-template-columns:95% 5%;
+    }
+}

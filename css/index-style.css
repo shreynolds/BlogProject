@@ -1,0 +1,81 @@
+@import 'header-style.css';
+@import 'footer-style.css';
+@import 'links.css';
+@import 'typography.css';
+
+
+
+img {
+    max-height: 100%;
+    max-width: 100%;  
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "hd"
+      "main" 
+      "nav"
+      "ft";
+}
+
+.navigation {
+    grid-area: nav;
+    background-color: #78898E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    border: 2px solid whitesmoke;
+}
+
+.body {
+    grid-area: main; 
+    background-color: #8dcad6;  
+    border: 2px solid whitesmoke; 
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*If the screen is wide enough, adjusts to have better layout*/
+@media(min-width: 600px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 75px 1fr 50px;
+        grid-template-areas: 
+          "hd hd hd hd hd hd hd hd"
+          "nav main main main main main main main" 
+          "ft ft ft ft ft ft ft ft";
+    }
+
+    .navigation {
+        background-color: #78898E;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

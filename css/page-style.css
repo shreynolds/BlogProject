@@ -1,0 +1,90 @@
+@import 'header-style.css';
+@import 'footer-style.css';
+@import 'typography.css';
+
+/* Setting up the main container layout*/
+.container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "hd"
+      "title"
+      "au"
+      "sh"
+      "qu"
+      "main"
+      "img"
+      "ft";
+}
+
+/* Setting the maximum sizes for 3 types of images*/
+#prof {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#social {
+    max-height: 25px;
+    max-width: 25px;
+}
+
+#ex {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Setting the grid area, background color, and internal displays for things within the grid*/
+.title {
+    grid-area: title;
+    background-color: #8dcad6;
+}
+
+.author {
+    grid-area: au;
+    background-color: #8dcad6;
+    display: flex;
+    flex-direction: row;
+    font-size: 100%;
+    width: 100%
+}
+
+.share {
+    grid-area: sh;
+    background-color: #8dcad6;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.quote{
+    grid-area: qu;
+    background-color: #8dcad6;
+}
+
+article {
+    grid-area: main;
+    background-color: #8dcad6;
+}
+
+.images {
+    grid-area: img;
+    background-color: #8dcad6;
+
+}
+
+/* If the screen is wide enough, putting pictures next to text*/
+@media(min-width: 600px) {
+    .container{
+        grid-template-areas: 
+        "hd hd"
+        "title title"
+        "au au"
+        "sh sh"
+        "qu qu"
+        "main img"
+        "ft ft";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
