@@ -1,5 +1,3 @@
-@import 'links.css';
-
 header {
     grid-area: hd;
     background-color: #78898E;
@@ -10,13 +8,12 @@ header {
 }
 
 #title{
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
 }
-
 
 @media(min-width: 900px) {
     header {
-        grid-template-columns:95% 5%;
+        grid-template-columns: 95% 5%;
     }
 }

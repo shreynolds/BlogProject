@@ -1,7 +1,8 @@
+/*Setting info for styling the headers*/
 h1{
     text-decoration: underline;
     color: black;
-    font-family:serif;
+    font-family: serif;
 }
 
 h2 {
@@ -17,7 +18,29 @@ h3{
     font-family: serif;
 }
 
+/*Setting info for paragraph texts*/
+p{
+    color: black;
+    font-family: serif;
+    text-align: left;
+}
+
+/*Setting info for styling the quote*/
+
 blockquote{
     background: #eee;
-    border:1px dashed grey;
+    border:1px dotted grey;
+    color: black;
+}
+
+/*Setting info for styling links*/
+
+a {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+}
+
+a:hover {
+    color: blue;
 }
