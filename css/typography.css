@@ -19,4 +19,5 @@ h3{
 
 blockquote{
     background: #eee;
+    border:1px dashed grey;
 }
